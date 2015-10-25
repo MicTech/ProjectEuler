@@ -18,5 +18,8 @@
   "devDependencies": {
     "mocha": "2.3.3",
     "chai": "3.4.0"
+  },
+  "dependencies": {
+    "project-euler-lib": "1.0.4"
   }
 }

@@ -1,14 +1,5 @@
 var expect = require('chai').expect;
-
-function generateSeries(start, end) {
-  var numbers = [];
-
-  for (var i = start; i < end + 1; i++) {
-    numbers.push(i);
-  }
-
-  return numbers;
-}
+var lib = require('project-euler-lib');
 
 function multiple(sequence) {
   var lastNumber = sequence[sequence.length - 1];
@@ -30,20 +21,11 @@ function multiple(sequence) {
 }
 
 function getSmallestMultiple(start, end) {
-  var sequence = generateSeries(start, end);
+  var sequence = lib.generateNumberSequence(start, end);
   return multiple(sequence);
 }
 
 describe('Project Euler #5 - Smallest multiple', function () {
-  describe('generateSeries', function() {
-    it('should return array with 10 elements with numbers from 1 to 10', function() {
-      var sequence = generateSeries(1, 10);
-
-      expect(sequence).to.have.length(10);
-      expect(sequence).to.eql([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-    });
-  });
-
   describe('multiple', function() {
     it('should return 2520 as smallest number that can be divided by sequence of the numbers from 1 to 10', function() {
       expect(multiple([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])).to.equal(2520);

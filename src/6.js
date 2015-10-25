@@ -1,14 +1,5 @@
 var expect = require('chai').expect;
-
-function generateSeries(start, end) {
-  var numbers = [];
-
-  for (var i = start; i < end + 1; i++) {
-    numbers.push(i);
-  }
-
-  return numbers;
-}
+var lib = require('project-euler-lib');
 
 function getSumSquareDifference(sequence) {
   var sumSquares = sequence.reduce(function(prev, curr) {
@@ -27,7 +18,7 @@ function getSumSquareDifference(sequence) {
 describe('Project Euler #6 - Sum square difference', function () {
   describe('generateSeries', function() {
     it('should return array with 10 elements with numbers from 1 to 10', function() {
-      var sequence = generateSeries(1, 10);
+      var sequence = lib.generateNumberSequence(1, 10);
 
       expect(sequence).to.have.length(10);
       expect(sequence).to.eql([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
@@ -40,7 +31,7 @@ describe('Project Euler #6 - Sum square difference', function () {
     });
 
     it('should return 25164150 as a difference between the sum of the squares and the square of the sum for first 100 natural numbers.', function() {
-      var sequence = generateSeries(1, 100);
+      var sequence = lib.generateNumberSequence(1, 100);
       expect(getSumSquareDifference(sequence)).to.equal(25164150);
     });
   });
