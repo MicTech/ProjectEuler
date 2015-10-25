@@ -1,4 +1,4 @@
-var assert = require("assert");
+var expect = require('chai').expect;
 
 function sumOfEvenFibonacciNumbers(below) {
   var sum = 0;
@@ -21,10 +21,10 @@ function sumOfEvenFibonacciNumbers(below) {
 
 describe('Project Euler #2 - Even Fibonacci numbers', function () {
   it('should return 44 as sum of even numbers in Fibonacci sequence below 100', function () {
-    assert.equal(44, sumOfEvenFibonacciNumbers(100));
+    expect(sumOfEvenFibonacciNumbers(100)).to.equal(44);
   });
 
   it('should return 4613732 as sum of even numbers in Fibonacci sequence below 4 000 000', function() {
-    assert.equal(4613732, sumOfEvenFibonacciNumbers(4000000));
-  })
+    expect(sumOfEvenFibonacciNumbers(4000000)).to.equal(4613732);
+  });
 });

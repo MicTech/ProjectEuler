@@ -1,4 +1,4 @@
-var assert = require("assert");
+var expect = require('chai').expect;
 
 function sumOfNaturalNumbers(below, listOfDivisors) {
   var sum = 0;
@@ -18,10 +18,10 @@ function sumOfNaturalNumbers(below, listOfDivisors) {
 
 describe('Project Euler #1 - Multiples of 3 and 5', function () {
   it('should return 23 for numbers below 10 that are multiples of 3 or 5', function () {
-    assert.equal(23, sumOfNaturalNumbers(10, [3,5]));
+    expect(sumOfNaturalNumbers(10, [3,5])).to.equal(23);
   });
 
   it('should return 233168 for numbers below 1000 that are multiples of 3 or 5', function() {
-    assert.equal(233168, sumOfNaturalNumbers(1000, [3,5]));
-  })
+    expect(sumOfNaturalNumbers(1000, [3,5])).to.equal(233168);
+  });
 });

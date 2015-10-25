@@ -1,4 +1,4 @@
-var assert = require("assert");
+var expect = require('chai').expect;
 
 function isPrimeNumber(number) {
   for (var i = 2; i < number; i++) {
@@ -30,34 +30,34 @@ function getNthPrime(n) {
 describe('Project Euler #7 - 10001st prime', function () {
   describe('isPrimeNumber', function () {
     it('should return true for 2', function() {
-      assert.equal(true, isPrimeNumber(2));
+      expect(isPrimeNumber(2)).to.equal(true);
     });
 
     it('should return false for 88', function() {
-      assert.equal(false, isPrimeNumber(88));
+      expect(isPrimeNumber(88)).to.equal(false);
     });
 
     it('should return true for 269', function() {
-      assert.equal(true, isPrimeNumber(269));
+      expect(isPrimeNumber(269)).to.equal(true);
     });
 
     it('should return false for 654', function() {
-      assert.equal(false, isPrimeNumber(654));
+      expect(isPrimeNumber(654)).to.equal(false);
     });
 
     it('should return true for 853', function() {
-      assert.equal(true, isPrimeNumber(853));
+      expect(isPrimeNumber(853)).to.equal(true);
     });
   });
 
   describe('getNthPrime', function() {
     it('should return 13 as a 6th prime number', function() {
-      assert.equal(13, getNthPrime(6));
+      expect(getNthPrime(6)).to.equal(13);
     });
 
     it('should return 104743 as a 10001th prime number', function() {
       this.timeout(80000);
-      assert.equal(104743, getNthPrime(10001));
+      expect(getNthPrime(10001)).to.equal(104743);
     });
   });
 });

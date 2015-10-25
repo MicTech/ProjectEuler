@@ -1,4 +1,4 @@
-var assert = require("assert");
+var expect = require('chai').expect;
 
 function findProductOfPythagoreanTriplet(sum) {
   for (var a = 1; a < sum; a++) {
@@ -17,10 +17,10 @@ function findProductOfPythagoreanTriplet(sum) {
 
 describe('Project Euler #9 - Special Pythagorean triplet', function () {
   it('should return 60 for product of triplet with sum is 12', function () {
-    assert.equal(60, findProductOfPythagoreanTriplet(12));
+    expect(findProductOfPythagoreanTriplet(12)).to.equal(60);
   });
 
   it('should return 31875000 for product of triplet with sum is 1000', function () {
-    assert.equal(31875000, findProductOfPythagoreanTriplet(1000));
+    expect(findProductOfPythagoreanTriplet(31875000)).to.equal(1000);
   });
 });

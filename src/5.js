@@ -1,4 +1,4 @@
-var assert = require("assert");
+var expect = require('chai').expect;
 
 function generateSeries(start, end) {
   var numbers = [];
@@ -37,25 +37,27 @@ function getSmallestMultiple(start, end) {
 describe('Project Euler #5 - Smallest multiple', function () {
   describe('generateSeries', function() {
     it('should return array with 10 elements with numbers from 1 to 10', function() {
-      assert.equal(generateSeries(1, 10).length, 10);
-      assert.deepEqual(generateSeries(1, 10), [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-    })
-  })
+      var sequence = generateSeries(1, 10);
+
+      expect(sequence).to.have.length(10);
+      expect(sequence).to.eql([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+    });
+  });
 
   describe('multiple', function() {
     it('should return 2520 as smallest number that can be divided by sequence of the numbers from 1 to 10', function() {
-      assert.equal(2520, multiple([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
-    })
+      expect(multiple([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])).to.equal(2520);
+    });
   });
 
   describe('getSmallestMultiple', function() {
     it('should return 2520 as smallest number that can be divided by each of the number from 1 to 10', function () {
-      assert.equal(2520, getSmallestMultiple(1, 10));
+      expect(getSmallestMultiple(1, 10)).to.equal(2520);
     });
 
     it('should return 232792560 as smallest number that can be divided by each of the number from 1 to 20', function () {
       this.timeout(80000);
-      assert.equal(232792560, getSmallestMultiple(1, 20));
+      expect(getSmallestMultiple(1, 20)).to.equal(232792560);
     });
   });
 });

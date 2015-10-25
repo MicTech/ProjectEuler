@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/MicTech/project-euler#readme",
   "devDependencies": {
-      "mocha": "2.3.3"
-    }
+    "mocha": "2.3.3",
+    "chai": "3.4.0"
+  }
 }

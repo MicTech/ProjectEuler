@@ -1,4 +1,4 @@
-var assert = require("assert");
+var expect = require('chai').expect;
 
 function isPalindrome(value) {
   var s = value.toString();
@@ -34,33 +34,33 @@ function getPalindrome(digitsCount, threshold) {
 describe('Project Euler #4 - Largest palindrome product', function () {
   describe('isPalindrome', function() {
     it('should return true for 123321', function() {
-      assert.equal(true, isPalindrome(123321));
+      expect(isPalindrome(123321)).to.equal(true);
     });
 
     it('should return false for 123321123', function() {
-      assert.equal(true, isPalindrome(123321));
+      expect(isPalindrome(123321123)).to.equal(false);
     });
 
     it('should return true for racecar', function() {
-      assert.equal(true, isPalindrome("racecar"));
+      expect(isPalindrome("racecar")).to.equal(true);
     });
 
     it('should return false for tesla', function() {
-      assert.equal(false, isPalindrome("tesla"));
+      expect(isPalindrome("tesla")).to.equal(false);
     });
   });
 
   describe('getPalindrome', function() {
     it('should return 9009 for the product of two 2-digit numbers', function () {
-      assert.equal(9009, getPalindrome(2, 9000));
+      expect(getPalindrome(2, 9000)).to.equal(9009);
     });
 
     it('should return 906609 for the product of two 3-digit numbers', function() {
-      assert.equal(906609, getPalindrome(3, 900000));
+      expect(getPalindrome(3, 900000)).to.equal(906609);
     })
 
     it('should return 99000099 for the product of two 4-digit numbers', function() {
-      assert.equal(99000099, getPalindrome(4, 90000000));
+      expect(getPalindrome(4, 90000000)).to.equal(99000099);
     })
   });
 });
