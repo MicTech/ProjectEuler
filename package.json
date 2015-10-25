@@ -1,0 +1,21 @@
+{
+  "name": "project-euler",
+  "version": "1.0.10",
+  "description": "Solutions for Project Euler problems.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MicTech/project-euler.git"
+  },
+  "author": "Michal Tehnik <michal.tehnik@mictech.cz> (http://mictech.cz/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MicTech/project-euler/issues"
+  },
+  "homepage": "https://github.com/MicTech/project-euler#readme",
+  "devDependencies": {
+      "mocha": "2.3.3"
+    }
+}
