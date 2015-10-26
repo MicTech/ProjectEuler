@@ -2,13 +2,17 @@ var expect = require('chai').expect;
 var lib = require('project-euler-lib');
 
 function largestPrimeFactor(number) {
-  var largest = 1;
+  var largest = 2;
 
   //This is just workaround
   var limit = number > 10000 ? 10000 : number;
 
-  for (var i = 2; i < limit; i++) {
-    if (lib.isPrimeNumber(i)) {
+  var primes = [2];
+
+  for (var i = 3; i < limit; i += 2) {
+    if (lib.isPrimeNumberWithListOfPrimeNumbers(i, primes)) {
+      primes.push(i);
+
       if (number % i == 0) {
         largest = i;
       }
