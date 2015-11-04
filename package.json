@@ -1,6 +1,6 @@
 {
   "name": "project-euler",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Solutions for Project Euler problems.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
